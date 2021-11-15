@@ -1,0 +1,57 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+
+.p-single-portfolio{
+    &__mockup{
+        display: flex;
+        flex-wrap: wrap;
+        *{
+            object-fit: cover;
+        }
+        :first-child,:last-child{
+            width: 75%;
+        }
+        :nth-child(2),:nth-child(3){
+            width: 25%;
+        }
+    }
+    &__title{
+        position: relative;
+    }
+    &__category{
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        li{
+            font-size: 1.6rem;
+            margin-right: 30px;
+            padding: 5px 10px;
+            border: solid 2px variables.$blue;
+            border-radius: 10px;
+        }
+    }
+    &__edit{
+        .wp-block-cover{
+            border-radius: 50px;
+            max-width: 950px;
+            padding: 70px;
+            margin: 80px 0;
+            &__inner-container{
+                color: variables.$blue;
+            }    
+        }
+        h2{
+            font-size: 4rem;
+        }
+        p{
+            font-size: 1.6rem;
+            line-height: 2;
+            margin-top: 30px;
+        }
+        .blocks-gallery-grid,.wp-block-image img{
+            margin:0 auto;
+            display: inline-block;
+        }
+    }
+}

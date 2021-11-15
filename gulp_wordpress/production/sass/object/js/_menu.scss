@@ -1,0 +1,22 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+
+
+.js-menu{
+    display: block;
+}
+.c-header__button.js-menu{
+    ::before,::after{
+        top:20px;
+        left: 7px;
+    }
+    ::before {
+        transform: rotate(45deg);
+    }
+    ::after{
+        transform: rotate(-45deg);
+    }
+    span{
+        background-color:variables.$gray;
+    }
+}

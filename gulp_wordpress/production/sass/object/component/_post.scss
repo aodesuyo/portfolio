@@ -1,0 +1,16 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+@use 'component';
+
+.c-post{
+    h2{
+        @extend .c-title;
+    }
+    h3{
+        @extend .c-title--noborder;
+    }
+    p{
+        @extend .c-text;
+
+    }
+}

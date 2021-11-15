@@ -1,0 +1,94 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+
+.p-single{
+    h2{
+        font-size: 3.6rem;
+        margin: 30px 0;
+    }
+    h3{
+        font-weight:200 ;
+        font-size: 2.4rem;
+    }
+    p{
+        margin: 30px 0;
+        font-size: 1.6rem;
+    }
+    .wp-block-media-text{
+        position: relative;
+        margin: 80px 0 180px;
+        display: block;
+        @include foundation.media_PC{
+            margin:120px 0 220px;
+        }
+        .wp-block-media-text__media{
+            position: absolute;
+            top:0;
+            left: -15px;
+            z-index: 1;
+            @include foundation.media_PC{
+                width: 420px;
+            }
+            @include foundation.media_tablet{
+                width: 340px;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .wp-block-media-text__content{
+            background-color: #F0F0F0;
+            transform: translateY(100px);
+            padding: 150px 28px;
+            @include foundation.media_PC{
+                width: 770px;
+                padding:120px 185px 90px;
+            }
+            @include foundation.media_tablet{
+            width: 80vw;
+            margin-right: 0;
+            margin-left: auto;
+            padding: 150px 40px;
+            }
+
+        }
+
+    }
+    .wp-block-table{
+        padding-bottom: 30px;
+        border-top:solid 1px #CCCCCC;
+        margin: 30px 0 0 0;
+        table{
+            @include foundation.media_PC{
+                margin-left: 300px;
+                width: 800px;
+            }
+            @include foundation.media_tablet{
+                margin-left: 30px;
+                width: calc(100% - 30px);
+            }
+
+        }
+        td{
+            font-size: 1.4rem;
+            padding: 20px 0;
+            border-bottom:solid 1px #CCCCCC;
+        }
+    }
+    iframe{
+        margin-top: 40px;
+        height: 125vw;
+        width: 100%;
+        overflow:hidden;
+        @include foundation.media_PC{
+            height: 360px;
+        }
+        @include foundation.media_tablet{
+            height: 230px;
+        }
+
+    }
+}

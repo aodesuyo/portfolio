@@ -1,0 +1,28 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+@use 'component';
+
+.c-menu{
+    position: fixed;
+    top: 12vh;
+    right: 8vw;
+    width: 80vw;
+    height: 80vh;
+    z-index: 2;
+    background-color: #E0E0E0;
+    border: solid 3px variables.$blue;
+    display: none;
+    &__wrapper{
+        text-align: center;
+        margin:auto;
+        @include foundation.media_tablet {
+            transform: translateY(50%);            
+        }
+    }
+    &__list{
+        .menu-item{
+            @extend .c-text;
+            margin: 10px;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+
+.p-portfolio-list{
+    background-image: url("../img/p0435_l.jpg");
+    background-repeat: repeat;
+    position: relative;
+    &::before,&::after{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 43px;
+        background-repeat:repeat;
+    }
+    &::before{
+        top:0;
+        background-image: url("../img/layer-top.png");
+    }
+    &::after{
+        bottom:0;
+        background-image: url("../img/layer-top.png");
+        transform: scale(1, -1);
+    }
+    &__wrapper{
+        display: flex;
+        margin: 50px 0;
+        flex-wrap: wrap;
+    }
+    &__card{
+        background-color: #fff;
+        border-radius: 20px;
+        margin: 10px;
+        overflow: hidden;
+        height: 450px;
+        padding: 30px;
+        width:min(100%,300px);
+        img{
+            width: min(98%,250px);
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &__category{
+        display: flex;
+        li{
+            margin: 10px 10px 10px 0;
+            padding: 5px;
+            border-radius: 5px;
+            color:variables.$white;
+            background-color:variables.$darkyellow;
+        }
+    }
+    &__title{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &__text{
+        height: 48px;
+        overflow: hidden;
+    }
+    &__button{
+        margin-left:30px;
+    }
+}

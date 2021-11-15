@@ -1,0 +1,48 @@
+@use '../foundation/foundation';
+
+.l-header{
+    width: 100%;
+    &.l-header__single{
+        height: 120vw;
+        @include foundation.media_tablet{
+            height:80vw;
+        }
+
+        @include foundation.media_PC{
+            height: 34vw;
+        }
+
+    }
+}
+.l-main{
+    margin:100px 30px;
+    @include foundation.media_PC{
+        margin: 100px auto;
+        max-width: 950px;
+
+    }
+    &-wide{
+        width: 100%;
+        margin:150px 0px;
+        padding:100px 30px;
+        @include foundation.media_PC{
+            padding: 100px 5vw;
+        }
+    
+    }
+}
+.l-single{
+    @include foundation.media_PC{
+        @include foundation.marginPC;
+    }
+
+    @include foundation.marginSP;
+    @include foundation.media_tablet{
+        @include foundation.marginTablet;
+    }
+
+}
+
+.l-footer{
+    width: 100%;
+}

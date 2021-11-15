@@ -1,0 +1,86 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+
+.c{
+    &-title{
+    font-size: 3.6rem;
+    margin: 30px 0;
+    border-bottom: solid 2px variables.$blue;
+    &--vertical{
+        font-size: 4rem;
+        position: absolute;
+        right: 10px;
+        @include foundation.media_tablet{
+            writing-mode: vertical-rl;
+            font-size: 5rem;
+            right:10vw;
+        }
+        @include foundation.media_PC{
+            font-size: 6rem;
+        }
+    }
+    &--skill{
+        color: variables.$white;
+        display: inline-block;
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+        padding: 5px 5px 10px;
+        background-color:variables.$blue;
+        border-radius: 5px;
+        transform: translate(-50px,-50px);
+    }
+    &--small{
+        font-size: 2rem;
+    }
+    &--noborder{
+        font-size: 3.6rem;
+        margin: 30px 0;
+    
+    }
+    &__solid{
+        font-weight:200;
+        font-size: 2.4rem;
+    }
+    &__border{
+        padding-bottom: 30px;
+        border-bottom:solid 1px #CCCCCC;
+        margin: 30px 0 0 0;
+    }
+}
+    &-text{
+    font-size: 1.6rem;
+    color: variables.$blue;
+        &--bold{
+            @extend .c-text;
+            font-weight: bold;
+        }
+    }
+    &-button{
+        font-size: 1.6rem;
+        position: relative;
+        color: variables.$blue;
+        &::after{
+            content: "";
+            position: absolute;
+            right: -3.6rem;
+            top:3px;
+            width: 20px;
+            height: 20px;
+            display: block;
+            background: variables.$blue;
+            border-radius: 50%;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            right: -3.2rem;
+            top:8px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 5px 8.7px;
+            border-color: transparent transparent transparent variables.$white;
+        }
+    }
+}

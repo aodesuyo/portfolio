@@ -1,0 +1,47 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+
+.p-hero{
+    height: 200vh;
+    position: relative;
+    &__title{
+        position: sticky;
+        top:0;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+        background-color:variables.$blue;
+        color: variables.$white;
+        padding-top: 75vh;
+        padding-left: 5vh;
+        font-size:4vw;
+    }
+    &__text{
+        width: 50%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__wrap{
+        width: 80%;
+        transform: translateX(20%)translateY(30%);
+        height: 70%;
+        font-size: max(2vw,1.6rem);
+        color:variables.$blue;
+        &--name{
+            color:variables.$blue;
+            width: 90%;
+            margin-left: 5%;
+        }
+    }
+    &__name{
+        width: 50%;
+        height: 100vh;
+        margin-left: 50%;
+        margin-top: 20vh;
+    }
+    &__list{
+        margin: 0 auto;
+    }
+}

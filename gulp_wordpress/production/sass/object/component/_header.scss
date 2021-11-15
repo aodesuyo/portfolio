@@ -1,0 +1,36 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+
+.c-header{
+    &__button{
+        color: black;
+        position: fixed;
+        top:10vh;
+        right: 10vw;
+        font-size: 0;
+        z-index: 100;
+
+        ::before,::after{
+            content: "";
+            @include foundation.hamburger;
+        }
+        ::before{
+            top:15px;
+            left: 6px;
+        }
+        ::after{
+            top: 25px;
+            left: 6px;
+        }
+        span{
+            position: absolute;
+            top:0;
+            display: inline-block;
+            width:50px;/*幅*/
+            height:50px;/*高さ*/
+            border-radius: 50%;/*角丸*/
+            border:solid 3px variables.$blue;
+        }
+    }
+
+}

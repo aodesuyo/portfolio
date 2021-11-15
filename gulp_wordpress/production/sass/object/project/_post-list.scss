@@ -1,0 +1,55 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+
+.p-post-list{
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+    &__item{
+        width: min(100%,300px);
+        height: 415px;
+        border:5px solid variables.$blue;
+        color: variables.$blue;
+        border-radius: 46px;
+        margin:0 25px 25px 0;
+        padding: 30px 20px;
+        position: relative;
+        @include foundation.media_tablet{
+            width: 300px;    
+        }
+        img{
+            width: 90%;
+            height: 150px;
+            display: block;
+            margin: 0 auto 10px;
+            object-fit: cover;
+            @include foundation.media_tablet{
+                width: 250px;
+            }
+        }
+    }
+    &__date{
+        font-size: 2rem;
+        font-family: MOBO, 'Montserrat', sans-serif, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+        position: absolute;
+        bottom: 30px;
+    }
+    &__title{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 10px;
+    }
+    &__text{
+        height: 9.8rem;
+        overflow: hidden;
+    }
+    &__button{
+        margin-left: 60%;
+        @include foundation.media_tablet{
+            margin-left: calc(100% - 300px);
+        }
+    }
+}

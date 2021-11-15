@@ -1,0 +1,65 @@
+@use './variables';
+
+@mixin media_tablet($width-media:768px){
+  @media only screen and
+    (min-width:$width-media){
+    @content;
+    }
+}
+@mixin media_PC($width-media:1440px){
+  @media only screen and
+    (min-width:$width-media){
+    @content;
+  }
+}
+@mixin paddingSP{
+  padding:40px 15px;
+
+}
+@mixin paddingTablet{
+  @media screen and(min-width:768px) and
+  (max-width:1440px) {
+    padding:40px 30px;
+    
+  }
+}
+@mixin marginSP{
+  margin: 80px 15px;
+}
+@mixin marginTablet{
+  margin: 80px 30px;
+}
+@mixin marginPC {
+  width: 1100px;
+  margin: 0 auto; 
+}
+@mixin hamburger{
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color:variables.$blue;
+  position:absolute;
+}
+@font-face{
+  font-family: "MOBO";
+  src: url("./fonts/MOBO.otf");
+  }
+html {
+    font-size: 62.5%; /*ベースを10pxにしています*/
+    font-family: MOBO, 'Montserrat', sans-serif, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+    color: variables.$blue;
+    overflow-y: scroll;
+    scroll-behavior:smooth;
+    background-color: variables.$white;
+}
+p{
+    font-family: "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration:none;
+  color : inherit;
+}
+

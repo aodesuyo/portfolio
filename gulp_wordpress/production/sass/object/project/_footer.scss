@@ -1,0 +1,23 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+
+.p-footer{
+    background-color: variables.$blue;
+    padding:18px 0; 
+    color: white;
+    text-align: center;
+    &__navi{
+        ul{
+            display: flex;
+            justify-content: center;
+            li{
+                margin:0 30px 30px 0;
+                font-size: 1.6rem;
+            }
+        }
+    }
+    a{
+        font-family: MOBO, 'Montserrat', sans-serif, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+        font-size: 1.6rem;
+    }
+}
