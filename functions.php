@@ -19,6 +19,11 @@
   }
   add_action( 'after_setup_theme','custom_theme_support');
 
+  function admin_css(){
+    echo '<link rel="stylesheet" type="text/css" href="'.get_template_directory_uri().'/css/admin.css">';
+    }
+    add_action('admin_head', 'admin_css');
+
   function my_theme_widgets_init() {
     register_sidebar( array(
       'name' => 'footer_widgets',

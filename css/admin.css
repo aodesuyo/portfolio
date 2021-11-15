@@ -1,0 +1,21 @@
+.p-custom{
+    border-collapse: collapse;
+}
+.p-custom td{
+    border: solid 1px gray;
+    padding: 10px;
+}
+.p-custom__label {
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 7px 10px;
+    line-height: 1.4;
+    font-size: 1.0rem;
+    border: 1px gray solid;
+    border-radius: 2rem;
+  }
+  .p-custom__label input {
+    display: none;
+  }
+  

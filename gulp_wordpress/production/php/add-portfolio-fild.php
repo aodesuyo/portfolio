@@ -36,10 +36,10 @@ function insert_portfolio_fields() {
 
   $portfolio_image_type =array('_pc1','_sp1','_pc2','_sp2');
   
-  echo '<table>';
+  echo '<table class="p-custom">';
   foreach ($portfolio_image_type as $value) {
     $portfolio_image_name = "portfolio_image".$value;
-    echo '<tr><td>'.$portfolio_image_name.'：<input type="file" name="'.$portfolio_image_name.'" accept="image/*"'.$portfolio_image_name.'/></td>';
+    echo '<tr><td><p>'.$portfolio_image_name.'</p><label class="p-custom__label">ファイルを選択<input type="file" name="'.$portfolio_image_name.'" accept="image/*"'.$portfolio_image_name.'/></label></td>';
 
     if(isset($portfolio_image_pc1) && strlen($portfolio_image_pc1) > 0){
       //portfolio_imageキーのpostmeta情報がある場合は、画像を表示
