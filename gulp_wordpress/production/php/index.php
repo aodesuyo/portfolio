@@ -4,19 +4,19 @@
             <h1 class="p-hero__title"> 
                 <span><?php bloginfo( 'description' );?></span>
             </h1>
-            <article class="p-hero__text">
+            <article class="p-hero__point">
                 <div class="p-hero__wrap">
                     <ul class="p-hero__list">
-                        <li>期限遵守</li>
-                        <li>言語化する力</li>
-                        <li>リモートコミュニケーション</li>
+                        <li class="c-title--noborder">期限遵守</li>
+                        <li class="c-title--noborder">言語化する力</li>
+                        <li class="c-title--noborder">リモートコミュニケーション</li>
                     </ul>
                     <p class="c-text">3つの自負で制作活動に貢献します</p>
                     <a class="c-button" href="/about">自己紹介をもっと見る</a>
                 </div>
             </article>
             <article class="p-hero__name">
-                <div class="p-hero__wrap--name">
+                <div class="p-hero__wrap">
                     <h2 class="c-title">改めまして、青（あお）と申します。</h2>
                     <p class="c-text">青は本名の苗字です。
                         Web制作・ライティング業務を承ります。

@@ -2,46 +2,55 @@
 @use '../foundation/variables';
 
 .p-hero{
-    height: 200vh;
     position: relative;
+    @include foundation.media_PC{
+        height: 200vh;
+    }
     &__title{
         position: sticky;
         top:0;
         left: 0;
-        width: 50%;
-        height: 100vh;
+        z-index: 2;
         background-color:variables.$blue;
         color: variables.$white;
-        padding-top: 75vh;
+        font-size:6vw;
+        height: 30vh;
+        padding-top: 15vh;
         padding-left: 5vh;
-        font-size:4vw;
+        @include foundation.media_PC{
+            font-size:4vw;
+            width: 50%;
+            height: 100vh;
+            padding-top: 75vh;
+        }
     }
-    &__text{
-        width: 50%;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    &__wrap{
-        width: 80%;
-        transform: translateX(20%)translateY(30%);
-        height: 70%;
-        font-size: max(2vw,1.6rem);
-        color:variables.$blue;
-        &--name{
-            color:variables.$blue;
-            width: 90%;
-            margin-left: 5%;
+    &__point{
+        margin-left: 5vh;
+        margin-top: 10vh;
+        height: 70vh;
+        @include foundation.media_PC{
+            width: 50%;
+            height: 100vh;
+            position: absolute;
+            top: 20vh;
+            right: 0;
         }
     }
     &__name{
+        height: 30vh;
+        width: 70vw;
+        margin-left: 25vw;
+        @include foundation.media_PC{
         width: 50%;
         height: 100vh;
         margin-left: 50%;
         margin-top: 20vh;
+        }
     }
-    &__list{
-        margin: 0 auto;
+    &__wrap{
+        @include foundation.media_PC{
+            width: 90%;
+            margin-left: 5vh;
+        }
     }
 }
