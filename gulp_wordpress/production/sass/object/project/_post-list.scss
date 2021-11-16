@@ -47,7 +47,6 @@
         overflow: hidden;
     }
     &__button{
-        margin-left: 60%;
         @include foundation.media_tablet{
             margin-left: calc(100% - 300px);
         }
