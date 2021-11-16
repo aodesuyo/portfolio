@@ -1,0 +1,31 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+@use '../component/component';
+
+.p-archive{
+    @include foundation.media_tablet{
+        display: flex;
+    }
+    &__post{
+        @include foundation.media_tablet{
+            width: 80%;
+        }    
+    }
+    &__option{
+        @include foundation.media_tablet{
+        width: 20%;
+        height: 100%;
+        margin-left: 30px;
+        position: sticky;
+        top:calc(10vh + 50px + 20px);
+        }
+        li{
+            @extend .c-text;
+            margin-bottom: 5px;
+        }
+    }
+    &__monthly{
+        margin-bottom: 50px;
+    }
+
+}
