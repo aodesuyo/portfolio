@@ -6,10 +6,9 @@
         color: black;
         position: fixed;
         top:10vh;
-        right: 10vw;
+        left: calc(95% - 50px);
         font-size: 0;
         z-index: 100;
-
         ::before,::after{
             content: "";
             @include foundation.hamburger;

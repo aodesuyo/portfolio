@@ -142,7 +142,7 @@ a {
   color: black;
   position: fixed;
   top: 10vh;
-  right: 10vw;
+  left: calc(95% - 50px);
   font-size: 0;
   z-index: 100;
 }
@@ -225,9 +225,10 @@ a {
   margin-left: 5vh;
   margin-top: 10vh;
   height: 70vh;
+  margin-bottom: 100px;
 }
 .p-hero__name {
-  height: 30vh;
+  height: min(30vh, 100%);
   width: 70vw;
   margin-left: 25vw;
 }
@@ -413,9 +414,6 @@ a {
 .p-post-list__text {
   height: 9.8rem;
   overflow: hidden;
-}
-.p-post-list__button {
-  margin-left: 60%;
 }
 
 .p-single-portfolio__mockup {

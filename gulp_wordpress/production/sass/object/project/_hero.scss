@@ -28,6 +28,7 @@
         margin-left: 5vh;
         margin-top: 10vh;
         height: 70vh;
+        margin-bottom : 100px;
         @include foundation.media_PC{
             width: 50%;
             height: 100vh;
@@ -37,7 +38,7 @@
         }
     }
     &__name{
-        height: 30vh;
+        height: min(30vh,100%);
         width: 70vw;
         margin-left: 25vw;
         @include foundation.media_PC{
