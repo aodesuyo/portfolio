@@ -19,24 +19,35 @@
         position: relative;
     }
     &__category{
+        display: flex;
+        flex-wrap: wrap;
+        @include foundation.media_tablet{
         position: absolute;
         right: 0;
         top: 0;
-        display: flex;
+        }
         li{
             font-size: 1.6rem;
-            margin-right: 30px;
+            display: inline-block;
+            margin: 5px 5px 30px 5px;
             padding: 5px 10px;
             border: solid 2px variables.$blue;
             border-radius: 10px;
+            @include foundation.media_tablet{
+                margin-right: 10px;
+            }
         }
     }
     &__edit{
         .wp-block-cover{
             border-radius: 50px;
             max-width: 950px;
-            padding: 70px;
-            margin: 80px 0;
+            margin: 80px 0;    
+            padding: 70px 30px;
+            @include foundation.media_tablet{
+                padding: 70px;
+            }
+
             &__inner-container{
                 color: variables.$blue;
             }    
