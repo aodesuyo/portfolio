@@ -23,6 +23,16 @@
         background-image: url("../img/layer-top.png");
         transform: scale(1, -1);
     }
+    &__verticaltitle{
+        position: absolute;
+        right: 10px;
+        @include foundation.media_tablet{
+            right:5vw;
+        }
+        @include foundation.media_tablet{
+            right:2vw;
+        }
+    }
     &__wrapper{
         display: flex;
         margin: 50px 0;

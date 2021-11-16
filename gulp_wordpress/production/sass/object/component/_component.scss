@@ -8,12 +8,9 @@
     border-bottom: solid 2px variables.$blue;
     &--vertical{
         font-size: 4rem;
-        position: absolute;
-        right: 10px;
         @include foundation.media_tablet{
             writing-mode: vertical-rl;
             font-size: 5rem;
-            right:10vw;
         }
         @include foundation.media_PC{
             font-size: 6rem;
