@@ -8,11 +8,17 @@
     text-align: center;
     &__navi{
         ul{
-            display: flex;
-            justify-content: center;
+            @include foundation.media_tablet{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
             li{
-                margin:0 30px 30px 0;
-                font-size: 1.6rem;
+                margin: 20px 0;
+                @include foundation.media_tablet{
+                    margin:0 30px 30px 0;
+                    font-size: 1.6rem;
+                }
             }
         }
     }
