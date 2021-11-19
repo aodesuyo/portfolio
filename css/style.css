@@ -73,8 +73,6 @@ a {
 }
 .c-title--vertical {
   font-size: 4rem;
-  position: absolute;
-  right: 10px;
 }
 .c-title--skill {
   color: #FCFCFC;
@@ -102,7 +100,7 @@ a {
   border-bottom: solid 1px #CCCCCC;
   margin: 30px 0 0 0;
 }
-.c-text, .c-menu__list .menu-item, .c-post p, .c-text--bold {
+.c-text, .p-archive__option li, .p-contact .wpcf7 form.sent .wpcf7-response-output, .p-contact form.invalid .wpcf7-response-output, .c-menu__list .menu-item, .c-post p, .c-text--bold {
   font-size: 1.6rem;
   color: #2B3DB1;
 }
@@ -136,6 +134,32 @@ a {
   border-style: solid;
   border-width: 5px 0 5px 8.7px;
   border-color: transparent transparent transparent #FCFCFC;
+}
+.c-button-wide {
+  background-color: #2B3DB1;
+  color: #FCFCFC;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  padding: 5px 10px;
+}
+.c-button-wide:hover {
+  box-shadow: 4px 4px #E0E0E0;
+}
+.c-button-wide:active {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+.c-category {
+  display: flex;
+  flex-wrap: wrap;
+}
+.c-category__item, .c-category li {
+  font-size: 1.6rem;
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 5px 10px;
+  border: solid 2px #2B3DB1;
+  border-radius: 10px;
 }
 
 .c-header__button {
@@ -239,13 +263,8 @@ a {
   color: white;
   text-align: center;
 }
-.p-footer__navi ul {
-  display: flex;
-  justify-content: center;
-}
 .p-footer__navi ul li {
-  margin: 0 30px 30px 0;
-  font-size: 1.6rem;
+  margin: 20px 0;
 }
 .p-footer a {
   font-family: MOBO, "Montserrat", sans-serif, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
@@ -302,6 +321,10 @@ a {
   bottom: 0;
   background-image: url("../img/layer-top.png");
   transform: scale(1, -1);
+}
+.p-portfolio-list__verticaltitle {
+  position: absolute;
+  right: 10px;
 }
 .p-portfolio-list__wrapper {
   display: flex;
@@ -375,6 +398,9 @@ a {
   padding: 10px 30px;
   border-radius: 10px;
 }
+.p-contact .wpcf7 form.sent .wpcf7-response-output, .p-contact form.invalid .wpcf7-response-output {
+  border: none;
+}
 
 .p-post-list__wrapper {
   display: flex;
@@ -433,24 +459,11 @@ a {
 .p-single-portfolio__title {
   position: relative;
 }
-.p-single-portfolio__category {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: flex;
-}
-.p-single-portfolio__category li {
-  font-size: 1.6rem;
-  margin-right: 30px;
-  padding: 5px 10px;
-  border: solid 2px #2B3DB1;
-  border-radius: 10px;
-}
 .p-single-portfolio__edit .wp-block-cover {
   border-radius: 50px;
   max-width: 950px;
-  padding: 70px;
   margin: 80px 0;
+  padding: 70px 30px;
 }
 .p-single-portfolio__edit .wp-block-cover__inner-container {
   color: #2B3DB1;
@@ -466,6 +479,29 @@ a {
 .p-single-portfolio__edit .blocks-gallery-grid, .p-single-portfolio__edit .wp-block-image img {
   margin: 0 auto;
   display: inline-block;
+}
+.p-archive__option li {
+  margin-bottom: 5px;
+}
+.p-archive__monthly {
+  margin-bottom: 50px;
+}
+.p-archive__form label span {
+  border: solid 2px #2B3DB1;
+  cursor: pointer;
+}
+.p-archive__form label input {
+  display: none;
+}
+.p-archive__form label input:hover + span {
+  box-shadow: 4px 4px #E0E0E0;
+}
+.p-archive__form label input:active + span {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+.p-archive__form label input:checked + span {
+  background-color: #E0E0E0;
 }
 
 .js-menu {
@@ -508,16 +544,39 @@ a {
     -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
     font-size: 5rem;
-    right: 10vw;
+  }
+  .c-category {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .c-category__item, .c-category li {
+    margin-right: 10px;
+    margin-bottom: 30px;
   }
   .c-menu__wrapper {
     transform: translateY(50%);
+  }
+  .p-footer__navi ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .p-footer__navi ul li {
+    margin: 0 30px 30px 0;
+    font-size: 1.6rem;
   }
   .p-skill__topic {
     width: 70%;
   }
   .p-skill__topic:nth-child(2) {
     margin-left: 30%;
+  }
+  .p-portfolio-list__verticaltitle {
+    right: 5vw;
+  }
+  .p-portfolio-list__verticaltitle {
+    right: 2vw;
   }
   .p-contact input[type=text], .p-contact input[type=email], .p-contact textarea {
     width: 70%;
@@ -530,6 +589,22 @@ a {
   }
   .p-post-list__button {
     margin-left: calc(100% - 300px);
+  }
+  .p-single-portfolio__edit .wp-block-cover {
+    padding: 70px;
+  }
+  .p-archive {
+    display: flex;
+  }
+  .p-archive__post {
+    width: 80%;
+  }
+  .p-archive__option {
+    width: 20%;
+    height: 100%;
+    margin-left: 30px;
+    position: sticky;
+    top: calc(10vh + 50px + 20px);
   }
 }
 @media only screen and (min-width: 1440px) {

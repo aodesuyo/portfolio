@@ -54,3 +54,47 @@ get_template_part( 'add-portfoilo-taxonomy' );
 
 // 固定カスタムフィールドボックス
 get_template_part( 'add-portfolio-fild' );
+
+// getの値を追加
+function add_query_vars_filter( $vars ){
+  $vars[] = "portfolio_tag";
+  $vars[] = "qux";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
+// アーカイブページにクエリを追加
+add_action( 'pre_get_posts', 'add_archive_custom_query' ); // pre_get_posts(投稿記事一覧を取得する直前に動くフック)
+// フック時に使う関数
+function add_archive_custom_query( $query ) {
+  if ( ! is_admin() && $query->is_main_query() && is_post_type_archive('portfolio_tag') ) {
+
+    // nonce検証
+    $nonce = $_REQUEST['nonce'];
+    if(!wp_verify_nonce($nonce, 'my-archive-nonce')) {
+      die();
+    }
+
+    // GETの引数を取得
+    $get_qux = get_query_var('portfolio_tag');    
+    // meta_query を追加
+
+    // チェックボックス
+    if(!empty($get_qux)) {
+      array_push($meta_query, array(
+      'relation' => 'AND',
+      'post_type' => 'portfolio',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'portfolio_tag',
+          'field'    => 'slug',
+          'terms'    => $my_qux,
+        ),
+      ),
+      'compare' => 'LIKE' // チェックボックスの場合はLIKE検索になるので注意
+      ));
+    }
+
+    $query->set('meta_query', $meta_query);
+  }
+}

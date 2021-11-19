@@ -76,7 +76,7 @@
     </article>
     <article class="l-main-wide p-portfolio-list">
         <div class="p-portfolio-list__wave--top"></div>
-        <h2 class="c-title--vertical">制作物一覧</h2>
+        <h2 class="c-title--vertical p-portfolio-list__verticaltitle">制作物一覧</h2>
         <div class="p-portfolio-list__wrapper">
         <?php $args = array(
         'post_type' => 'portfolio',

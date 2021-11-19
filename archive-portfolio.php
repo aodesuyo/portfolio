@@ -1,6 +1,20 @@
 <?php get_header(); ?><!--header.phpを読み込むテンプレートタグ（インクルードタグ）-->
 <main class="l-main">
     <h2 class="c-title">制作物一覧</h2>
+
+<!-- フォームパーツ -->
+<form class="p-archive__form" action="<?=esc_url(home_url('/portfolio/'))?>">
+
+    <label><input type="checkbox" name="portfolio_tag[]" value="コーディング" <?=in_array('コーディング',(array)get_query_var('portfolio_tag'))?' checked':''?>><span class="c-category__item">コーディング</span></label>
+    <label><input type="checkbox" name="portfolio_tag[]" value="デザイン" <?=in_array('デザイン',(array)get_query_var('portfolio_tag'))?' checked':''?>><span class="c-category__item">デザイン</span></label>
+    <label><input type="checkbox" name="portfolio_tag[]" value="ライティング" <?=in_array('ライティング',(array)get_query_var('portfolio_tag'))?' checked':''?>><span class="c-category__item">ライティング</span></label>
+
+    <?php wp_nonce_field('my-archive-nonce', 'nonce'); ?>
+    
+    <button class="c-button-wide" type="submit">検索する</button>
+
+</form>
+
 <ul class="l-archive-list">
     <?php
         if(have_posts()):
