@@ -18,26 +18,7 @@
     &__title{
         position: relative;
     }
-    &__category{
-        display: flex;
-        flex-wrap: wrap;
-        @include foundation.media_tablet{
-        position: absolute;
-        right: 0;
-        top: 0;
-        }
-        li{
-            font-size: 1.6rem;
-            display: inline-block;
-            margin: 5px 5px 30px 5px;
-            padding: 5px 10px;
-            border: solid 2px variables.$blue;
-            border-radius: 10px;
-            @include foundation.media_tablet{
-                margin-right: 10px;
-            }
-        }
-    }
+
     &__edit{
         .wp-block-cover{
             border-radius: 50px;

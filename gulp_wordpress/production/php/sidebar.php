@@ -1,6 +1,6 @@
 <nav class="c-menu">
     <div class="c-menu__wrapper">
-        <h2 class="c-title--noborder">青のポートフォリオ</h2>
+        <h2 class="c-title--noborder"><a href='<?php echo home_url(); ?>'>青のポートフォリオ</a></h2>
         <?php  wp_nav_menu( array(
             'theme_location'=>'sidebar',
             'container' => 'false',

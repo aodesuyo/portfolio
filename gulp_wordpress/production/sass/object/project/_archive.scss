@@ -27,5 +27,28 @@
     &__monthly{
         margin-bottom: 50px;
     }
+    &__form{
+        label{
+            span{
+                border:solid 2px variables.$blue;
+                cursor:pointer;
+            }
+            input{
+                display: none;
+                &:hover + span{
+                    box-shadow: 4px 4px variables.$gray;
+    
+                }
+                &:active + span{
+                    box-shadow: none;
+                    transform: translate(4px,4px);
+                }
+                &:checked + span{
+                    background-color: variables.$gray;
+                }
+            }
+    
+        }
+    }
 
 }

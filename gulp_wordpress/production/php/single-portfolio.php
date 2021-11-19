@@ -7,7 +7,7 @@
   <article class="l-main">
     <div class="p-single-portfolio__title">
       <h1 class="c-title"><?php the_title(); ?></h1>
-      <ul class="p-single-portfolio__category">
+      <ul class="c-category"> 
           <?php
             if ($terms = get_the_terms($post->ID, 'portfolio_tag')) {
             foreach ( $terms as $term ) {echo '<li>'.esc_html($term->name).'</li>';}

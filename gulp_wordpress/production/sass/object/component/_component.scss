@@ -79,5 +79,41 @@
             border-width: 5px 0 5px 8.7px;
             border-color: transparent transparent transparent variables.$white;
         }
+        &-wide{
+            background-color: variables.$blue;
+            color:variables.$white;
+            border-radius: 10px;
+            font-size: 1.6rem;
+            padding:5px 10px;
+            &:hover{
+                box-shadow: 4px 4px variables.$gray;
+            }
+            &:active{
+                box-shadow: none;
+                transform: translate(4px,4px);
+
+            }
+        }
+    }
+    &-category{
+        display: flex;
+        flex-wrap: wrap;
+        @include foundation.media_tablet{
+        position: absolute;
+        right: 0;
+        top: 0;
+        }
+        &__item,li{
+            font-size: 1.6rem;
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 5px 10px;
+            border: solid 2px variables.$blue;
+            border-radius: 10px;
+            @include foundation.media_tablet{
+                margin-right: 10px;
+                margin-bottom: 30px;
+            }
+        }
     }
 }

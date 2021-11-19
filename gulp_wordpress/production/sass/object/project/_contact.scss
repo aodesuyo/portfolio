@@ -1,5 +1,6 @@
 @use '../foundation/foundation';
 @use '../foundation/variables';
+@use '../component/component';
 
 .p-contact{
     background-color: variables.$darkyellow;
@@ -32,5 +33,9 @@
         background-color: variables.$blue;
         padding: 10px 30px;
         border-radius: 10px;
+    }
+    .wpcf7 form.sent .wpcf7-response-output,form.invalid .wpcf7-response-output{
+        border: none;
+        @extend .c-text;
     }
 }
