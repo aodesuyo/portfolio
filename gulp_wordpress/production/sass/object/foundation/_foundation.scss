@@ -43,7 +43,13 @@
 @font-face{
   font-family: "MOBO";
   src: url("./fonts/MOBO.otf");
-  }
+}
+@mixin blockmargin {
+  margin: 30px 0;
+  @include media_PC{
+    margin: 60px 0;
+  }  
+}
 html {
     font-size: 62.5%; /*ベースを10pxにしています*/
     font-family: MOBO, 'Montserrat', sans-serif, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;

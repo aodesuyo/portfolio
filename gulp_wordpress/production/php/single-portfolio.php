@@ -4,7 +4,7 @@
  
   <?php $terms = get_the_terms($post->ID, 'tax_news'); ?>
  
-  <article class="l-main">
+  <article class="l-main c-post">
     <div class="p-single-portfolio__title">
       <h1 class="c-title"><?php the_title(); ?></h1>
       <ul class="c-category"> 
