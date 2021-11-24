@@ -39,6 +39,10 @@
                     <?php wp_list_categories( 'title_li=' ); ?>
                 </ul>
             </section>
+            <section class="p-archive__search">
+                <h2 class="c-title--small">キーワード検索</h2>
+                <?php get_search_form(); ?>
+            </section>
         </section>
     </article>
     <div class="c-paginate">

@@ -483,8 +483,23 @@ a {
 .p-archive__option li {
   margin-bottom: 5px;
 }
-.p-archive__monthly {
+.p-archive__monthly, .p-archive__category {
   margin-bottom: 50px;
+}
+.p-archive__search .search-form {
+  margin: 10px 0;
+}
+.p-archive__search .search-field {
+  background-color: #E0E0E0;
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.p-archive__search .search-submit {
+  background-color: #2B3DB1;
+  color: #FCFCFC;
+  padding: 5px;
+  border-radius: 5px;
 }
 .p-archive__form label span {
   border: solid 2px #2B3DB1;

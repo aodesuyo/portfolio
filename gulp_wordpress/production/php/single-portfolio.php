@@ -23,7 +23,7 @@
         <?php echo '<img src="'.wp_get_attachment_url(get_post_meta($post->ID , 'portfolio_image_sp2' ,true)). '">'; ?>
         <?php echo '<img src="'.wp_get_attachment_url(get_post_meta($post->ID , 'portfolio_image_pc2' ,true)). '">'; ?>
       </div>
-      <div class="p-single-portfolio__edit">
+      <div class="c-post p-single-portfolio__edit">
         <?php the_content(); ?>
       </div>
     </article>

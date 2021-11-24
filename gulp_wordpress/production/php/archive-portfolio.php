@@ -11,7 +11,7 @@
 
     <?php wp_nonce_field('my-archive-nonce', 'nonce'); ?>
     
-    <button class="c-button-wide" type="submit">検索する</button>
+    <button class="c-button-wide" type="submit">絞り込む</button>
 
 </form>
 
