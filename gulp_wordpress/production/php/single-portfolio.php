@@ -25,6 +25,7 @@
       </div>
       <div class="c-post p-single-portfolio__edit">
         <?php the_content(); ?>
+        <?php wp_link_pages(); ?>
       </div>
     </article>
   <?php endwhile; ?>

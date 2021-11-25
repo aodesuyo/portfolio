@@ -82,8 +82,14 @@
     .wp-caption{
         width: 100%;
         height: 100%;
+        &-text{
+            color:variables.$blue;
+        }
     }
-
+    .gallery-caption{
+        color:variables.$blue;
+    }
+    
     ul,ol{
         @include foundation.blockmargin;
         li{

@@ -9,8 +9,13 @@
       ));//html5
       add_theme_support('post-thumbnails');//アイキャッチ画像
       add_theme_support('title-tag');//タイトルを投稿ページに合わせて出力する
-      add_theme_support('menus');//メニュー機能を有効にする
-
+      add_theme_support( 'automatic-feed-links' );
+      add_theme_support( 'wp-block-styles' );
+      add_theme_support( 'custom-header' );
+      add_theme_support( 'responsive-embeds' );
+      add_theme_support( 'align-wide' );
+      add_theme_support( 'custom-logo' );
+      add_theme_support( 'custom-background') ;
       register_nav_menus(array(
           'sidebar'=>'ナビメニュー',
           'footerMenu'=>'フッターメニュー'

@@ -90,7 +90,7 @@
             <?php if ( has_post_thumbnail() ) : ?>
                 <?php the_post_thumbnail();?>
             <?php else : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/p0337_l.jpg">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/p0337_l.jpg">
             <?php endif; ?>
             <ul class="p-portfolio-list__category">
                 <?php
@@ -126,9 +126,9 @@
             <?php if(have_posts()): while (have_posts()):the_post(); ?>
             <section class="p-post-list__item">
             <?php if ( has_post_thumbnail() ) : ?>
-            <?php the_post_thumbnail(); ?>
+                <?php the_post_thumbnail(); ?>
             <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/p0337_l.jpg">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/p0337_l.jpg">
             <?php endif; ?>
                 <h3 class="c-title--small p-post-list__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <p class="c-text p-post-list__text"><?php echo get_the_excerpt(); ?></p>
