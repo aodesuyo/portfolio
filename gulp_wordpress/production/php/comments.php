@@ -1,11 +1,11 @@
 <?php if( comments_open() ){ ?>
     <h3>コメント</h3>
 <?php if( have_comments() ): ?>
-    <ul class="commets-list">
+    <ul class="c-comment">
     <?php wp_list_comments();?>
     </ul>
         <?php if (get_comment_pages_count() > 1) : ?>
-            <ul id="comments-pagination">
+            <ul id="c-comments__pagination">
                 <li id="prev-comments"><?php previous_comments_link('&lt;&lt; 前のコメント'); ?></li>
                 <li id="next-comments"><?php next_comments_link('次のコメント &gt;&gt;'); ?></li>
             </ul>
