@@ -103,3 +103,44 @@ function add_archive_custom_query( $query ) {
     $query->set('meta_query', $meta_query);
   }
 }
+
+class My_Walker_Comment extends Walker_Comment {
+	function html5_comment( $comment, $depth, $args ) {
+    $tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
+
+    $commenter = wp_get_current_commenter();
+      if ( $commenter['comment_author_email'] ) {
+        $moderation_note = 'Your comment is awaiting moderation.';
+        } else {
+        $moderation_note = 'Your comment is awaiting moderation. This is a preview, your comment will be visible after it has been approved.';
+		}
+    ?>
+		<!-- コメント-->
+    <<?php echo $tag; ?> class="c-comment__item">
+		<article class="c-comment__body">
+				<div class="c-comment__info">
+					<!-- コメント投稿者名 -->
+						<div class="c-comment__author">
+								<?php
+                        if( get_comment_author( $comment) == get_the_author() ){
+                          echo '記事執筆者 ' . get_comment_author( $comment );
+                        }else{
+                          echo 'コメント投稿者 ' . get_comment_author( $comment );
+                        }
+                       ?>
+						</div>
+            <time><?php echo get_comment_date( '', $comment ); ?></time>
+						<?php edit_comment_link( 'コメントを編集', '<span class="edit-link">', '</span>' ); ?>
+        </div>
+				<?php if ( '0' == $comment->comment_approved ) : ?> <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
+				<?php endif; ?>
+				<!-- コメント本文 -->
+				<div class="c-comment__content">
+						<?php 
+                    $comment_text = esc_html(get_comment_text());
+					echo  '<p class="c-text">' . $comment_text . '</p>';
+                    ?> </div>
+		</article>
+		<?php
+    }
+}

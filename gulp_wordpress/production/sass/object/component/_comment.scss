@@ -1,0 +1,37 @@
+@use '../foundation/foundation';
+@use '../foundation/variables';
+
+.c-comment{
+    &__info{
+        display: flex;
+    }
+    &__author{
+        margin-right: 10px;
+    }
+    &__content{
+        background:variables.$gray;
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+        margin-top: 15px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: -30px;
+            left: 10%;
+            margin-left: -15px;
+            border: 15px solid transparent;
+            border-bottom: 15px solid variables.$gray;
+        }
+    }
+    &-pagination{
+        display: flex;
+        justify-content: space-between;
+        &__prev,&__next{            
+            display: inline-block;
+            &:hover{
+                background-color: variables.$yellow;
+            }
+        }
+    }
+}

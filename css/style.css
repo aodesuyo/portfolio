@@ -171,6 +171,39 @@ a {
   border-radius: 10px;
 }
 
+.c-comment__info {
+  display: flex;
+}
+.c-comment__author {
+  margin-right: 10px;
+}
+.c-comment__content {
+  background: #E0E0E0;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 15px;
+}
+.c-comment__content:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 10%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #E0E0E0;
+}
+.c-comment-pagination {
+  display: flex;
+  justify-content: space-between;
+}
+.c-comment-pagination__prev, .c-comment-pagination__next {
+  display: inline-block;
+}
+.c-comment-pagination__prev:hover, .c-comment-pagination__next:hover {
+  background-color: #FFFF02;
+}
+
 .c-post h4, .c-post h5, .c-post h6 {
   margin: 30px 0;
 }
@@ -523,6 +556,10 @@ li > ul {
 .p-contact .wpcf7 form.sent .wpcf7-response-output, .p-contact form.invalid .wpcf7-response-output {
   border: none;
 }
+.p-contact .comment-reply-title, .p-contact .c-commnent__form, .p-contact .comment-form-cookies-consent, .p-contact .form-submit, .p-contact .logged-in-as {
+  padding: 10px 30px;
+  margin: 0px;
+}
 
 .p-post-list__wrapper {
   display: flex;
@@ -668,6 +705,22 @@ li > ul {
 .c-header__button.js-menu span {
   background-color: #E0E0E0;
 }
+
+/*
+foundation
+*/
+/*
+layout
+*/
+/*
+component
+*/
+/*
+project
+*/
+/*
+js
+*/
 @media only screen and (min-width: 768px) {
   .l-header.l-header__single {
     height: 80vw;

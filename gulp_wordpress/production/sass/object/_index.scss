@@ -1,12 +1,25 @@
+/*
+foundation
+*/
 @forward './foundation/foundation';
 @forward './foundation/variables';
+/*
+layout
+*/
 @forward './layout/layout';
+/*
+component
+*/
 @forward './component/archive';
 @forward './component/component';
+@forward './component/comment';
 @forward './component/post';
 @forward './component/header';
 @forward './component/menu';
 @forward './component/paginate';
+/*
+project
+*/
 @forward './project/hero';
 @forward './project/footer';
 @forward './project/skill';
@@ -16,4 +29,7 @@
 @forward './project/single-portfolio';
 @forward './project/archive';
 @forward './project/search';
+/*
+js
+*/
 @forward './js/menu';
