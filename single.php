@@ -9,7 +9,7 @@
         <?php the_content(); ?>
         <?php wp_link_pages(); ?>
 <?php endwhile;?>
-<a class="c-button" href="/single">投稿一覧に戻る</a>
+<a class="c-button" href="<?php echo home_url(); ?>/single/">投稿記事一覧に戻る</a>
 <?php comments_template(); ?>
 </main>
 <?php get_footer(); ?><!--footer.phpを読み込むテンプレートタグ（インクルードタグ）-->

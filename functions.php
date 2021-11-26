@@ -130,7 +130,7 @@ class My_Walker_Comment extends Walker_Comment {
                        ?>
 						</div>
             <time><?php echo get_comment_date( '', $comment ); ?></time>
-						<?php edit_comment_link( 'コメントを編集', '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_comment_link( 'コメントを編集  ', '<span class="edit-link">', '</span>' ); ?>
         </div>
 				<?php if ( '0' == $comment->comment_approved ) : ?> <em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
 				<?php endif; ?>
@@ -144,3 +144,14 @@ class My_Walker_Comment extends Walker_Comment {
 		<?php
     }
 }
+
+function archive( $args, $post_type ) {
+
+	if ( 'post' == $post_type ) {
+		$args['rewrite'] = true;
+		$args['has_archive'] = 'single'; //任意のスラッグ名
+	}
+	return $args;
+
+}
+add_filter( 'register_post_type_args', 'archive', 10, 2 );

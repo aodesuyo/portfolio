@@ -138,7 +138,7 @@
             </section>
             <?php endwhile; endif; ?>
         </div>
-        <a class="p-post-list__button c-button" href="/single">ブログにアクセスする</a>
+        <a class="p-post-list__button c-button" href="<?php echo home_url(); ?>/single/"> ブログにアクセスする</a>
     </article>
     </main>
 <?php get_footer(); ?><!--footer.phpを読み込むテンプレートタグ（インクルードタグ）-->

@@ -57,7 +57,7 @@
             'total' => $wp_query->max_num_pages
         ) ); ?>
         </div>
-        <a class="c-button" href="/single">投稿一覧に戻る</a>
+        <a class="c-button" href="<?php echo home_url(); ?>/single/">投稿一覧に戻る</a>
     </main>
 <?php get_footer(); ?><!--footer.phpを読み込むテンプレートタグ（インクルードタグ）-->
 
