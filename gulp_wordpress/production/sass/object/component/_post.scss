@@ -8,6 +8,7 @@
     }
     h3{
         @extend .c-title--noborder;
+        font-size: 2.4rem;
     }
     h4,h5,h6{
         @extend .c-title--small;

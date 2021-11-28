@@ -16,7 +16,7 @@
             </ul>
         <?php endif ;?>
     <?php else :?>
-        <p>コメントはありません</p>
+        <p class="c-text">コメントはありません</p>
 <?php endif ;?>
 <article class="c-comment__area">
     <?php

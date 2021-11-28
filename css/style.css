@@ -250,6 +250,9 @@ a {
   font-size: 1.6rem;
 }
 
+.c-post h3 {
+  font-size: 2.4rem;
+}
 .c-post h4, .c-post h5, .c-post h6 {
   margin: 30px 0;
 }
@@ -464,6 +467,9 @@ li > ul {
 }
 .c-menu-single li {
   margin-bottom: 5px;
+}
+.c-menu-single__content {
+  margin: 30px 0;
 }
 
 .c-paginate .page-numbers {

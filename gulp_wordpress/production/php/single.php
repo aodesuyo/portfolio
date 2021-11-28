@@ -14,6 +14,14 @@
     </section>
     <section class="l-archive__sideber c-menu-single">
     <h1 class="c-title--small"><a href="<?php echo home_url(); ?>/single/"><?php bloginfo( 'name' ); ?></a></h1>
+    <section class="c-menu-single__content">
+                <h2 class="c-title--small">新着記事</h2>
+                <?php wp_get_archives( 'type=monthly&limit=12' ); ?>
+            </section>
+            <section class="c-menu-single__content">
+                <h2 class="c-title--small">カテゴリ</h2>
+                <?php wp_list_categories( 'title_li=' ); ?>
+            </section>
     <?php  wp_nav_menu( array(
             'theme_location'=>'postMenu',
             'container' => 'false',
