@@ -109,7 +109,7 @@ a {
   border-bottom: solid 1px #CCCCCC;
   margin: 30px 0 0 0;
 }
-.c-text, .p-archive__option li, .c-menu__list .menu-item, .c-post p, .c-post ul li, .c-post ol li, .p-contact .wpcf7 form.sent .wpcf7-response-output, .p-contact form.invalid .wpcf7-response-output, .c-comment__area .wpcf7 form.sent .wpcf7-response-output, .c-comment__area form.invalid .wpcf7-response-output, .c-text--bold {
+.c-text, .c-menu__list .menu-item, .c-menu-single li, .c-post p, .c-post ul li, .c-post ol li, .p-contact .wpcf7 form.sent .wpcf7-response-output, .p-contact form.invalid .wpcf7-response-output, .c-comment__area .wpcf7 form.sent .wpcf7-response-output, .c-comment__area form.invalid .wpcf7-response-output, .c-text--bold {
   font-size: 1.6rem;
   color: #2B3DB1;
 }
@@ -462,6 +462,9 @@ li > ul {
 .c-menu__list .menu-item {
   margin: 10px;
 }
+.c-menu-single li {
+  margin-bottom: 5px;
+}
 
 .c-paginate .page-numbers {
   text-align: center;
@@ -702,13 +705,6 @@ li > ul {
   margin: 0 auto;
   display: inline-block;
 }
-.p-archive__option li {
-  margin-bottom: 5px;
-}
-.p-archive__monthly, .p-archive__category {
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
 .p-archive__form label span {
   border: solid 2px #2B3DB1;
   cursor: pointer;
@@ -792,6 +788,16 @@ js
   .l-single {
     margin: 80px 30px;
   }
+  .l-archive__content {
+    width: 80%;
+  }
+  .l-archive__sideber {
+    width: 20%;
+    height: 100%;
+  }
+  .l-single__content {
+    width: 70%;
+  }
   .c-archive {
     display: flex;
   }
@@ -836,6 +842,11 @@ js
   .c-menu__wrapper {
     transform: translateY(50%);
   }
+  .c-menu-single {
+    margin-left: 30px;
+    position: sticky;
+    top: calc(10vh + 50px + 20px);
+  }
   .c-paginate-post {
     display: flex;
     justify-content: space-between;
@@ -873,9 +884,6 @@ js
   .p-single {
     display: flex;
   }
-  .p-single__content {
-    width: 70%;
-  }
   .p-single-portfolio__edit .wp-block-cover {
     padding: 70px;
   }
@@ -884,13 +892,6 @@ js
   }
   .p-archive__post {
     width: 80%;
-  }
-  .p-archive__option {
-    width: 20%;
-    height: 100%;
-    margin-left: 30px;
-    position: sticky;
-    top: calc(10vh + 50px + 20px);
   }
 }
 @media only screen and (min-width: 1440px) {

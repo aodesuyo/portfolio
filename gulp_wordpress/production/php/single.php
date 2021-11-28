@@ -1,7 +1,7 @@
 <?php get_header(); ?><!--header.phpを読み込むテンプレートタグ（インクルードタグ）-->
 <main <?php post_class( 'l-main' ); ?>>
 <article class="p-single">
-    <section class="p-single__content  c-post">
+    <section class="l-single__content c-post">
         <?php while (have_posts()):
                 the_post(); ?>
                 <h2 class="c-title"> 
@@ -12,20 +12,15 @@
                 <?php wp_link_pages(); ?>
         <?php endwhile;?>
     </section>
-    <section class="p-archive__option">
-        <h1 class="c-title--small"><a href="<?php echo home_url(); ?>/single/"><?php bloginfo( 'name' ); ?></a></h1>
-        <section class="p-archive__monthly">
-            <h2 class="c-title--small">アーカイブ</h2>
-            <ul>
-                <?php wp_get_archives( 'type=monthly&limit=12' ); ?>
-            </ul>
-        </section>
-        <section class="p-archive__category">
-            <h2 class="c-title--small">カテゴリー</h2>
-            <ul>
-                <?php wp_list_categories( 'title_li=' ); ?>
-            </ul>
-        </section>
+    <section class="l-archive__sideber c-menu-single">
+    <h1 class="c-title--small"><a href="<?php echo home_url(); ?>/single/"><?php bloginfo( 'name' ); ?></a></h1>
+    <?php  wp_nav_menu( array(
+            'theme_location'=>'postMenu',
+            'container' => 'false',
+            'items_wrap' => '<ul class="c-menu-single">%3$s</ul>',
+            'menu_class'=>'c-menu-single'
+            )
+    );?>
     </section>
 </article>
 <a class="c-button" href="<?php echo home_url(); ?>/single/">投稿記事一覧に戻る</a>

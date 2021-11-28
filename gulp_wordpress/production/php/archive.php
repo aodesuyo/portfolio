@@ -2,7 +2,7 @@
 <main class="l-main">
     <h2 class="c-title">投稿記事一覧</h2>
     <article class="p-archive">
-        <ul class="p-archive__post">
+        <ul class="l-archive__content">
             <?php
                 if(have_posts()):
                     while(have_posts()):
@@ -26,24 +26,16 @@
                 endif;
             ?><!--カテゴリに記事があればループ開始、なければ記事はありませんと返す-->
         </ul>
-        <section class="p-archive__option">
+        <section class="l-archive__sideber c-menu-single">
             <h1 class="c-title--small"><a href="<?php echo home_url(); ?>/single/"><?php bloginfo( 'name' ); ?></a></h1>
-            <section class="p-archive__monthly">
-                <h2 class="c-title--small">アーカイブ</h2>
-                <ul>
-                    <?php wp_get_archives( 'type=monthly&limit=12' ); ?>
-                </ul>
-            </section>
-            <section class="p-archive__category">
-                <h2 class="c-title--small">カテゴリー</h2>
-                <ul>
-                    <?php wp_list_categories( 'title_li=' ); ?>
-                </ul>
-            </section>
-            <section class="p-archive__search">
-                <h2 class="c-title--small">キーワード検索</h2>
                 <?php get_search_form(); ?>
-            </section>
+        <?php  wp_nav_menu( array(
+            'theme_location'=>'postMenu',
+            'container' => 'false',
+            'items_wrap' => '<ul class="c-menu-single">%3$s</ul>',
+            'menu_class'=>'c-menu-single'
+            )
+            );?>
         </section>
     </article>
     <div class="c-paginate">

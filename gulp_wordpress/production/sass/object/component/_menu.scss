@@ -26,3 +26,16 @@
         }
     }
 }
+.c-menu{
+    &-single{
+        @include foundation.media_tablet{
+        margin-left: 30px;
+        position: sticky;
+        top:calc(10vh + 50px + 20px);
+        }
+        li{
+            @extend .c-text;
+            margin-bottom: 5px;
+        }
+    }
+}

@@ -18,7 +18,9 @@
       add_theme_support( 'custom-background') ;
       register_nav_menus(array(
           'sidebar'=>'ナビメニュー',
-          'footerMenu'=>'フッターメニュー'
+          'footerMenu'=>'フッターメニュー',
+          'archive_postMenu'=>'投稿記事一覧サイドバーメニュー',
+          'postMenu'=>'投稿記事サイドバーメニュー'
       ));//メニュー位置を呼び出す
 
   }

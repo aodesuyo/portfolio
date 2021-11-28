@@ -5,11 +5,6 @@
     @include foundation.media_tablet{
         display: flex;
     }    
-    &__content{
-        @include foundation.media_tablet{
-            width: 70%;
-        }   
-    }
     img{
         width: 100%;
     }

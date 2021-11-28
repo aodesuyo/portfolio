@@ -42,7 +42,27 @@
     }
 
 }
-
 .l-footer{
     width: 100%;
+}
+.l-archive{
+    &__content{
+        @include foundation.media_tablet{
+            width: 80%;    
+        }    
+    }
+    &__sideber{
+        @include foundation.media_tablet{
+        width: 20%;
+        height: 100%;
+        }
+    }
+}
+.l-single{
+    &__content{
+        @include foundation.media_tablet{
+            width: 70%;
+        }   
+    }
+
 }
