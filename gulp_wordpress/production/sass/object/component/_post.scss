@@ -50,7 +50,11 @@
     .wp-block-image{
         text-align: center;
         @include foundation.blockmargin;
-
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
     }
     .alignleft{
         display: block;
@@ -133,6 +137,14 @@
                 font-size: 1.6rem;
             }
         }
-    
+    a{
+        font-size: 1.6rem;
+        &:hover{
+            background: variables.$yellow;
+        }
+    }
+    .tab-caption-box-label{
+        font-size: 1.6rem;
+    }
     
 }

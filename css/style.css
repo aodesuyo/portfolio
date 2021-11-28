@@ -242,6 +242,12 @@ a {
   text-align: center;
   margin: 30px 0;
 }
+.c-post .wp-block-image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .c-post .alignleft {
   display: block;
   margin-left: 0;
@@ -315,6 +321,15 @@ li > ul {
   padding: 28px 30px;
   border-right: 0px;
   border-bottom: 0px;
+  font-size: 1.6rem;
+}
+.c-post a {
+  font-size: 1.6rem;
+}
+.c-post a:hover {
+  background: #FFFF02;
+}
+.c-post .tab-caption-box-label {
   font-size: 1.6rem;
 }
 
