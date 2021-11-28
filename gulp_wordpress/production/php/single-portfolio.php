@@ -1,10 +1,10 @@
 <?php get_header(); ?>
- 
+  <main class="l-main">
   <?php while ( have_posts() ) : the_post(); ?>
  
   <?php $terms = get_the_terms($post->ID, 'tax_news'); ?>
  
-  <article class="l-main c-post">
+  <article class="c-post">
     <div class="p-single-portfolio__title">
       <h1 class="c-title"><?php the_title(); ?></h1>
       <ul class="c-category"> 
@@ -28,6 +28,13 @@
         <?php wp_link_pages(); ?>
       </div>
     </article>
+    
+    <div class="c-paginate-post">
+      <?php previous_post_link('%link','<< 前の制作物 %title'); ?>
+      <?php next_post_link('%link','%title 次の制作物 >>'); ?>
+    </div>
+    <a class="c-button" href="<?php echo get_post_type_archive_link( 'portfolio' ); ?>">制作物一覧に戻る</a>
+    </main>
   <?php endwhile; ?>
  
   <?php get_footer(); ?>
