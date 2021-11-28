@@ -161,6 +161,7 @@ a {
 .c-category {
   display: flex;
   flex-wrap: wrap;
+  margin: 0px;
 }
 .c-category__item, .c-category li {
   font-size: 1.6rem;
@@ -753,11 +754,7 @@ js
   .c-category {
     position: absolute;
     right: 0;
-    top: 0;
-  }
-  .c-category__item, .c-category li {
-    margin-right: 10px;
-    margin-bottom: 30px;
+    top: 30px;
   }
   .c-menu__wrapper {
     transform: translateY(50%);
@@ -833,6 +830,9 @@ js
   }
   .c-title--vertical {
     font-size: 6rem;
+  }
+  .c-category {
+    top: 0px;
   }
   .c-post h4, .c-post h5, .c-post h6 {
     margin: 60px 0;

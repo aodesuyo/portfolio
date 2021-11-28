@@ -98,10 +98,14 @@
     &-category{
         display: flex;
         flex-wrap: wrap;
+        margin: 0px;
         @include foundation.media_tablet{
         position: absolute;
         right: 0;
-        top: 0;
+        top: 30px;
+        }
+        @include foundation.media_PC{
+            top:0px;
         }
         &__item,li{
             font-size: 1.6rem;
@@ -110,10 +114,6 @@
             padding: 5px 10px;
             border: solid 2px variables.$blue;
             border-radius: 10px;
-            @include foundation.media_tablet{
-                margin-right: 10px;
-                margin-bottom: 30px;
-            }
         }
     }
 }
