@@ -146,5 +146,64 @@
     .tab-caption-box-label{
         font-size: 1.6rem;
     }
-    
+    .wp-block-media-text{
+        margin: 80px 10px 180px;
+        @include foundation.media_tablet{
+            display: flex;
+        }
+        @include foundation.media_PC{
+            margin:120px 20px 220px;
+        }
+        .wp-block-media-text__media{
+            @include foundation.media_tablet{
+                width: 50%;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .wp-block-media-text__content{
+            padding: 20px 30px;
+            background-color: variables.$gray;
+            @include foundation.media_tablet{
+                width: 50%;
+            }
+        }
+    }
+    .wp-block-table{
+        padding-bottom: 30px;
+        border-top:solid 1px #CCCCCC;
+        margin: 30px 0 0 0;
+        table{
+            @include foundation.media_PC{
+                margin-left: 300px;
+                width: 800px;
+            }
+            @include foundation.media_tablet{
+                margin-left: 30px;
+                width: calc(100% - 30px);
+            }
+        }
+        td{
+            font-size: 1.4rem;
+            padding: 20px 0;
+            border-bottom:solid 1px #CCCCCC;
+        }
+    }
+    iframe{
+        margin-top: 40px;
+        height: 125vw;
+        width: 100%;
+        overflow:hidden;
+        @include foundation.media_PC{
+            height: 360px;
+        }
+        @include foundation.media_tablet{
+            height: 230px;
+        }
+    }
+
 }

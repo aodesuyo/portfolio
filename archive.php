@@ -22,11 +22,12 @@
                     </li>
             <?php endwhile;
                 else:
-                    echo '<p class="c-common__text">記事はありません</p>';
+                    echo '<p class="c-text">記事はありません</p>';
                 endif;
             ?><!--カテゴリに記事があればループ開始、なければ記事はありませんと返す-->
         </ul>
         <section class="p-archive__option">
+            <h1 class="c-title--small"><a href="<?php echo home_url(); ?>/single/"><?php bloginfo( 'name' ); ?></a></h1>
             <section class="p-archive__monthly">
                 <h2 class="c-title--small">アーカイブ</h2>
                 <ul>

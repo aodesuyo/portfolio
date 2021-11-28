@@ -109,7 +109,7 @@ a {
   border-bottom: solid 1px #CCCCCC;
   margin: 30px 0 0 0;
 }
-.c-text, .p-archive__option li, .p-contact .wpcf7 form.sent .wpcf7-response-output, .p-contact form.invalid .wpcf7-response-output, .c-menu__list .menu-item, .c-post p, .c-post ul li, .c-post ol li, .c-text--bold {
+.c-text, .p-archive__option li, .c-menu__list .menu-item, .c-post p, .c-post ul li, .c-post ol li, .p-contact .wpcf7 form.sent .wpcf7-response-output, .p-contact form.invalid .wpcf7-response-output, .c-comment__area .wpcf7 form.sent .wpcf7-response-output, .c-comment__area form.invalid .wpcf7-response-output, .c-text--bold {
   font-size: 1.6rem;
   color: #2B3DB1;
 }
@@ -172,8 +172,47 @@ a {
   border-radius: 10px;
 }
 
+.p-contact, .c-comment__area {
+  background-color: #CDCD79;
+  padding: 30px 0;
+  border-radius: 20px;
+  color: #2B3DB1;
+}
+.p-contact p, .c-comment__area p {
+  margin: 20px;
+}
+.p-contact label, .c-comment__area label {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.p-contact input[type=text], .c-comment__area input[type=text], .p-contact input[type=email], .c-comment__area input[type=email], .p-contact textarea, .c-comment__area textarea {
+  background-color: #fff;
+  color: #2B3DB1;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
+.p-contact input[type=submit], .c-comment__area input[type=submit] {
+  font-size: 2rem;
+  color: #FCFCFC;
+  background-color: #2B3DB1;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+.p-contact .wpcf7 form.sent .wpcf7-response-output, .c-comment__area .wpcf7 form.sent .wpcf7-response-output, .p-contact form.invalid .wpcf7-response-output, .c-comment__area form.invalid .wpcf7-response-output {
+  border: none;
+}
+
+.c-comment {
+  margin: 60px 0;
+}
+.c-comment__area {
+  background: url(../img/p0337_l.jpg) repeat;
+  margin: 30px 0;
+}
 .c-comment__info {
   display: flex;
+  font-size: 1.6rem;
 }
 .c-comment__author {
   margin-right: 10px;
@@ -200,9 +239,15 @@ a {
 }
 .c-comment-pagination__prev, .c-comment-pagination__next {
   display: inline-block;
+  font-size: 1.6rem;
 }
 .c-comment-pagination__prev:hover, .c-comment-pagination__next:hover {
   background-color: #FFFF02;
+}
+.c-comment__form, .c-comment .comment-form-cookies-consent, .c-comment .form-submit, .c-comment .logged-in-as {
+  padding: 10px 30px;
+  margin: 0px;
+  font-size: 1.6rem;
 }
 
 .c-post h4, .c-post h5, .c-post h6 {
@@ -331,6 +376,35 @@ li > ul {
 }
 .c-post .tab-caption-box-label {
   font-size: 1.6rem;
+}
+.c-post .wp-block-media-text {
+  margin: 80px 10px 180px;
+}
+.c-post .wp-block-media-text .wp-block-media-text__media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.c-post .wp-block-media-text .wp-block-media-text__content {
+  padding: 20px 30px;
+  background-color: #E0E0E0;
+}
+.c-post .wp-block-table {
+  padding-bottom: 30px;
+  border-top: solid 1px #CCCCCC;
+  margin: 30px 0 0 0;
+}
+.c-post .wp-block-table td {
+  font-size: 1.4rem;
+  padding: 20px 0;
+  border-bottom: solid 1px #CCCCCC;
+}
+.c-post iframe {
+  margin-top: 40px;
+  height: 125vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 .c-header__button {
@@ -547,41 +621,6 @@ li > ul {
   margin-left: 30px;
 }
 
-.p-contact {
-  background-color: #CDCD79;
-  padding: 30px 0;
-  border-radius: 20px;
-  color: #2B3DB1;
-}
-.p-contact p {
-  margin: 20px;
-}
-.p-contact label {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-.p-contact input[type=text], .p-contact input[type=email], .p-contact textarea {
-  background-color: #fff;
-  color: #2B3DB1;
-  padding: 10px;
-  width: 100%;
-  border-radius: 10px;
-}
-.p-contact input[type=submit] {
-  font-size: 2rem;
-  color: #FCFCFC;
-  background-color: #2B3DB1;
-  padding: 10px 30px;
-  border-radius: 10px;
-}
-.p-contact .wpcf7 form.sent .wpcf7-response-output, .p-contact form.invalid .wpcf7-response-output {
-  border: none;
-}
-.p-contact .comment-reply-title, .p-contact .c-commnent__form, .p-contact .comment-form-cookies-consent, .p-contact .form-submit, .p-contact .logged-in-as {
-  padding: 10px 30px;
-  margin: 0px;
-}
-
 .p-post-list__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -620,6 +659,9 @@ li > ul {
 .p-post-list__text {
   height: 9.8rem;
   overflow: hidden;
+}
+.p-single img {
+  width: 100%;
 }
 
 .p-single-portfolio__mockup {
@@ -665,6 +707,7 @@ li > ul {
 }
 .p-archive__monthly, .p-archive__category {
   margin-bottom: 50px;
+  margin-top: 20px;
 }
 .p-archive__form label span {
   border: solid 2px #2B3DB1;
@@ -771,6 +814,25 @@ js
     right: 0;
     top: 30px;
   }
+  .p-contact input[type=text], .c-comment__area input[type=text], .p-contact input[type=email], .c-comment__area input[type=email], .p-contact textarea, .c-comment__area textarea {
+    width: 70%;
+  }
+  .c-post .wp-block-media-text {
+    display: flex;
+  }
+  .c-post .wp-block-media-text .wp-block-media-text__media {
+    width: 50%;
+  }
+  .c-post .wp-block-media-text .wp-block-media-text__content {
+    width: 50%;
+  }
+  .c-post .wp-block-table table {
+    margin-left: 30px;
+    width: calc(100% - 30px);
+  }
+  .c-post iframe {
+    height: 230px;
+  }
   .c-menu__wrapper {
     transform: translateY(50%);
   }
@@ -799,9 +861,6 @@ js
   .p-portfolio-list__verticaltitle {
     right: 2vw;
   }
-  .p-contact input[type=text], .p-contact input[type=email], .p-contact textarea {
-    width: 70%;
-  }
   .p-post-list__item {
     width: 300px;
   }
@@ -810,6 +869,12 @@ js
   }
   .p-post-list__button {
     margin-left: calc(100% - 300px);
+  }
+  .p-single {
+    display: flex;
+  }
+  .p-single__content {
+    width: 70%;
   }
   .p-single-portfolio__edit .wp-block-cover {
     padding: 70px;
@@ -849,6 +914,9 @@ js
   .c-category {
     top: 0px;
   }
+  .p-contact input[type=text], .c-comment__area input[type=text], .p-contact input[type=email], .c-comment__area input[type=email], .p-contact textarea, .c-comment__area textarea {
+    width: 50%;
+  }
   .c-post h4, .c-post h5, .c-post h6 {
     margin: 60px 0;
   }
@@ -866,6 +934,16 @@ js
   }
   .c-post table {
     margin: 60px 0;
+  }
+  .c-post .wp-block-media-text {
+    margin: 120px 20px 220px;
+  }
+  .c-post .wp-block-table table {
+    margin-left: 300px;
+    width: 800px;
+  }
+  .c-post iframe {
+    height: 360px;
   }
   .p-hero {
     height: 200vh;
@@ -892,9 +970,6 @@ js
   .p-hero__wrap {
     width: 90%;
     margin-left: 5vh;
-  }
-  .p-contact input[type=text], .p-contact input[type=email], .p-contact textarea {
-    width: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */

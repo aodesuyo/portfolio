@@ -1,9 +1,17 @@
 @use '../foundation/foundation';
 @use '../foundation/variables';
+@use '../project/contact';
 
 .c-comment{
+    margin: 60px 0;
+    &__area{
+    @extend .p-contact;
+    background: url(../img/p0337_l.jpg) repeat;
+    margin: 30px 0;
+    }
     &__info{
         display: flex;
+        font-size: 1.6rem;
     }
     &__author{
         margin-right: 10px;
@@ -29,9 +37,16 @@
         justify-content: space-between;
         &__prev,&__next{            
             display: inline-block;
+            font-size: 1.6rem;
             &:hover{
                 background-color: variables.$yellow;
             }
         }
     }
+    &__form,.comment-form-cookies-consent,.form-submit,.logged-in-as{
+        padding: 10px 30px;
+        margin: 0px;
+        font-size: 1.6rem;
+    }
+
 }
