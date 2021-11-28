@@ -20,7 +20,7 @@
         if(have_posts()):
             while(have_posts()):
                 the_post();?>
-                <li class="c-archive">
+            <li class="c-archive">
                 <?php if ( has_post_thumbnail() ) : ?>
                     <img class="c-archive__thumbnail" src=<?php echo esc_url(get_the_post_thumbnail_url()); ?>>
                 <?php else : ?>
@@ -37,7 +37,7 @@
                             }
                         ?>
                     </ul>
-                    <p class="c-text--bold"><?php echo esc_html( $post->portfolio_url ); ?></p>
+                    <a class="c-text--bold" href="<?php echo esc_html( $post->portfolio_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $post->portfolio_url ); ?></あ>
                     <p class="c-text--bold"><?php echo esc_html( $post->portfolio_about ); ?></p>
                 </div>
             </li>
