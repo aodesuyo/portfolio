@@ -20,3 +20,10 @@
         background-color:variables.$gray;
     }
 }
+
+.js-index{
+    display: block
+}
+.p-single-index__list .js-index{
+    display: none;
+}

@@ -146,7 +146,7 @@ class My_Walker_Comment extends Walker_Comment {
 		<?php
     }
 }
-
+//投稿記事一覧のURLをsingleで表示する
 function archive( $args, $post_type ) {
 
 	if ( 'post' == $post_type ) {
@@ -157,3 +157,6 @@ function archive( $args, $post_type ) {
 
 }
 add_filter( 'register_post_type_args', 'archive', 10, 2 );
+
+//投稿ページに目次
+get_template_part( 'add-index' );

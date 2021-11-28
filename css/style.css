@@ -705,6 +705,24 @@ li > ul {
   margin: 0 auto;
   display: inline-block;
 }
+
+.p-single-index {
+  background: url(../img/p0435_l.jpg) repeat;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 30px;
+}
+.p-single-index__title {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.p-single-index__button {
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+.p-single-index__list {
+  display: none;
+}
 .p-archive__form label span {
   border: solid 2px #2B3DB1;
   cursor: pointer;
@@ -764,6 +782,14 @@ li > ul {
 }
 .c-header__button.js-menu span {
   background-color: #E0E0E0;
+}
+
+.js-index {
+  display: block;
+}
+
+.p-single-index__list .js-index {
+  display: none;
 }
 
 /*
