@@ -354,15 +354,10 @@ li > ul {
   font-size: 1.6rem;
 }
 .c-post table {
-  margin: 30px 0;
   border-collapse: separate;
   border-spacing: 0px;
   border-right: 2px solid #2B3DB1;
   border-bottom: 2px solid #2B3DB1;
-  width: 100%;
-}
-.c-post table tr td:first-child {
-  width: 30%;
 }
 .c-post table td {
   border: solid 2px #2B3DB1;
@@ -395,13 +390,11 @@ li > ul {
 }
 .c-post .wp-block-table {
   padding-bottom: 30px;
-  border-top: solid 1px #CCCCCC;
   margin: 30px 0 0 0;
 }
 .c-post .wp-block-table td {
   font-size: 1.4rem;
   padding: 20px 0;
-  border-bottom: solid 1px #CCCCCC;
 }
 .c-post iframe {
   margin-top: 40px;
@@ -864,10 +857,6 @@ js
   .c-post .wp-block-media-text .wp-block-media-text__content {
     width: 50%;
   }
-  .c-post .wp-block-table table {
-    margin-left: 30px;
-    width: calc(100% - 30px);
-  }
   .c-post iframe {
     height: 230px;
   }
@@ -965,15 +954,8 @@ js
   .c-post ul, .c-post ol {
     margin: 60px 0;
   }
-  .c-post table {
-    margin: 60px 0;
-  }
   .c-post .wp-block-media-text {
     margin: 120px 20px 220px;
-  }
-  .c-post .wp-block-table table {
-    margin-left: 300px;
-    width: 800px;
   }
   .c-post iframe {
     height: 360px;
