@@ -21,11 +21,13 @@
             while(have_posts()):
                 the_post();?>
             <li class="c-archive">
-                <?php if ( has_post_thumbnail() ) : ?>
-                    <img class="c-archive__thumbnail" src=<?php echo esc_url(get_the_post_thumbnail_url()); ?>>
-                <?php else : ?>
-                    <img class="c-archive__thumbnail" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/p0337_l.jpg">
-                <?php endif; ?>
+                <a class="c-archive__thumbnail" href="<?php the_permalink(); ?>">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <img class="c-archive__thumbnail" src=<?php echo esc_url(get_the_post_thumbnail_url()); ?>>
+                    <?php else : ?>
+                        <img class="c-archive__thumbnail" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/p0337_l.jpg">
+                    <?php endif; ?>
+                </a>
                 <div class="c-archive__wrapper">
                     <?php the_title
                         ( '<h3 class="c-title--small"><a href="'.esc_url( get_permalink()).'">','</a></h3>');

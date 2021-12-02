@@ -52,14 +52,14 @@
 }
 html {
     font-size: 62.5%; /*ベースを10pxにしています*/
-    font-family: MOBO, 'Montserrat', sans-serif, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+    font-family: MOBO,  'Noto Sans JP','Montserrat', sans-serif, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
     color: variables.$blue;
     overflow-y: scroll;
     scroll-behavior:smooth;
     background-color: variables.$white;
 }
 p{
-    font-family: "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+    font-family:"游ゴシック",'Noto Sans JP', "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
 }
 ul{
   list-style: none;
