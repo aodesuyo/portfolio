@@ -496,6 +496,7 @@ li > ul {
   height: 30vh;
   padding-top: 15vh;
   padding-left: 5vh;
+  border-bottom-right-radius: 30px;
 }
 .p-hero__point {
   margin-left: 5vh;
@@ -966,8 +967,10 @@ js
   .p-hero__title {
     font-size: 4vw;
     width: 50%;
-    height: 100vh;
+    height: 110vh;
     padding-top: 75vh;
+    background-image: url(../img/proflie画像.png);
+    background-position: center;
   }
   .p-hero__point {
     width: 50%;
