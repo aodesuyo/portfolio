@@ -3,9 +3,12 @@
 
 .c{
     &-title{
-    font-size: 3.6rem;
+    font-size: 2.0rem;
     margin: 30px 0;
     border-bottom: solid 2px variables.$blue;
+    @include foundation.media_tablet{
+        font-size: 3.6rem;
+    }
     &--vertical{
         font-size: 4rem;
         @include foundation.media_tablet{
@@ -19,20 +22,23 @@
     &--skill{
         color: variables.$white;
         display: inline-block;
-        font-size: 2.4rem;
+        font-size: 2.0rem;
         margin-bottom: 10px;
-        padding: 5px 5px 10px;
+        padding: 5px;
         background-color:variables.$blue;
         border-radius: 5px;
         transform: translate(-50px,-50px);
+        @include foundation.media_tablet{
+            font-size: 2.4rem;
+            padding: 5px 5px 10px;
+        }    
     }
     &--small{
         font-size: 2rem;
     }
     &--noborder{
-        font-size: 3.6rem;
-        margin: 30px 0;
-    
+        @extend .c-title;
+        border-bottom: none;    
     }
     &__solid{
         font-weight:200;

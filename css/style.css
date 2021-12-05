@@ -75,8 +75,8 @@ a {
   margin: 30px auto;
 }
 
-.c-title, .c-post h2 {
-  font-size: 3.6rem;
+.c-title, .c-post h2, .c-title--noborder, .c-post h3 {
+  font-size: 2rem;
   margin: 30px 0;
   border-bottom: solid 2px #2B3DB1;
 }
@@ -86,9 +86,9 @@ a {
 .c-title--skill {
   color: #FCFCFC;
   display: inline-block;
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin-bottom: 10px;
-  padding: 5px 5px 10px;
+  padding: 5px;
   background-color: #2B3DB1;
   border-radius: 5px;
   transform: translate(-50px, -50px);
@@ -97,8 +97,7 @@ a {
   font-size: 2rem;
 }
 .c-title--noborder, .c-post h3 {
-  font-size: 3.6rem;
-  margin: 30px 0;
+  border-bottom: none;
 }
 .c-title__solid {
   font-weight: 200;
@@ -334,22 +333,27 @@ a {
 }
 .c-post ul, .c-post ol {
   margin: 30px 0;
+  -webkit-padding-start: 1.6rem;
+          padding-inline-start: 1.6rem;
 }
 li > ul {
   -webkit-padding-start: 1.6rem;
           padding-inline-start: 1.6rem;
 }
 
+.c-post ul {
+  list-style: outside;
+}
+.c-post ul li {
+  list-style: outside;
+}
 .c-post ol {
-  -webkit-padding-start: 1.6rem;
-          padding-inline-start: 1.6rem;
   list-style-type: decimal;
 }
 .c-post ol li {
   list-style: decimal;
 }
 .c-post pre {
-  padding: 50px 50px 50px 60px;
   background-color: #E0E0E0;
   font-size: 1.6rem;
 }
@@ -371,6 +375,9 @@ li > ul {
 }
 .c-post a:hover {
   background: #FFFF02;
+}
+.c-post a.customize-unpreviewable {
+  font-size: 1.1rem;
 }
 .c-post .tab-caption-box-label {
   font-size: 1.6rem;
@@ -589,13 +596,13 @@ li > ul {
   border-radius: 20px;
   margin: 10px;
   overflow: hidden;
-  height: 450px;
+  max-height: 450px;
   padding: 30px;
   width: min(100%, 300px);
 }
 .p-portfolio-list__card img {
   width: min(98%, 250px);
-  height: 250px;
+  height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
@@ -836,10 +843,17 @@ js
   .c-archive__wrapper {
     margin: 30px 20px 30px 50px;
   }
+  .c-title, .c-post h2, .c-title--noborder, .c-post h3 {
+    font-size: 3.6rem;
+  }
   .c-title--vertical {
     -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
     font-size: 5rem;
+  }
+  .c-title--skill {
+    font-size: 2.4rem;
+    padding: 5px 5px 10px;
   }
   .c-category {
     position: absolute;
@@ -893,6 +907,9 @@ js
   }
   .p-portfolio-list__verticaltitle {
     right: 2vw;
+  }
+  .p-portfolio-list__card img {
+    height: 250px;
   }
   .p-post-list__item {
     width: 300px;
@@ -969,8 +986,6 @@ js
     width: 50%;
     height: 110vh;
     padding-top: 75vh;
-    background-image: url(../img/proflie画像.png);
-    background-position: center;
   }
   .p-hero__point {
     width: 50%;

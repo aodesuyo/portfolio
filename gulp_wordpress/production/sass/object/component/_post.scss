@@ -97,6 +97,7 @@
     
     ul,ol{
         @include foundation.blockmargin;
+        padding-inline-start: 1.6rem;
         li{
             @extend .c-text;
         }
@@ -104,8 +105,13 @@
             padding-inline-start: 1.6rem;
         }
     }
+    ul{
+        list-style: outside;
+        li{
+            list-style:outside;
+        }
+    }
     ol{
-        padding-inline-start: 1.6rem;
         list-style-type: decimal;
         li{
         list-style: decimal;
@@ -113,7 +119,6 @@
     }
     
     pre{
-        padding:50px 50px 50px 60px;
         background-color: variables.$gray;
         font-size: 1.6rem;
     }
@@ -135,6 +140,9 @@
         font-size: 1.6rem;
         &:hover{
             background: variables.$yellow;
+        }
+        &.customize-unpreviewable{
+            font-size:1.1rem;
         }
     }
     .tab-caption-box-label{
