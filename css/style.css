@@ -241,7 +241,7 @@ a {
   font-size: 1.6rem;
 }
 .c-comment-pagination__prev:hover, .c-comment-pagination__next:hover {
-  background-color: #FFFF02;
+  background-color: #FFFF7C;
 }
 .c-comment__form, .c-comment .comment-form-cookies-consent, .c-comment .form-submit, .c-comment .logged-in-as {
   padding: 10px 30px;
@@ -288,12 +288,6 @@ a {
 .c-post .wp-block-image {
   text-align: center;
   margin: 30px 0;
-}
-.c-post .wp-block-image img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .c-post .alignleft {
   display: block;
@@ -374,7 +368,7 @@ li > ul {
   font-size: 1.6rem;
 }
 .c-post a:hover {
-  background: #FFFF02;
+  background: #FFFF7C;
 }
 .c-post a.customize-unpreviewable {
   font-size: 1.1rem;
@@ -669,9 +663,6 @@ li > ul {
 .p-post-list__text {
   height: 9.8rem;
   overflow: hidden;
-}
-.p-single img {
-  width: 100%;
 }
 
 .p-single-portfolio__mockup {
