@@ -22,6 +22,49 @@
           'archive_postMenu'=>'投稿記事一覧サイドバーメニュー',
           'postMenu'=>'投稿記事サイドバーメニュー'
       ));//メニュー位置を呼び出す
+      //色パレット管理
+      add_theme_support( 'editor-color-palette', [
+        [
+            'name'  => '青',
+            'slug'  => 'blue',
+            'color' => '#2B3DB1',
+        ],
+        [
+          'name'  => '薄青',
+          'slug'  => 'lightblue',
+          'color' => '#3C56FD',
+        ],
+        [
+          'name'  => '水色',
+          'slug'  => 'skyblue',
+          'color' => '#546BFF',
+        ],
+        [
+          'name'  => '白',
+          'slug'  => 'white',
+          'color' => '#FCFCFC',
+        ],
+        [
+          'name'  => '灰色',
+          'slug'  => 'gray',
+          'color' => '#E0E0E0',
+        ],
+        [
+          'name'  => '濃黄色',
+          'slug'  => 'darkyellow',
+          'color' => '#CDCD79',
+        ],
+        [
+          'name'  => '黄色',
+          'slug'  => 'yellow',
+          'color' => '#FFFF7C',
+        ],
+        [
+            'name'  => '黒',
+            'slug'  => 'black',
+            'color' => '#000',
+        ],
+    ] );
 
   }
   add_action( 'after_setup_theme','custom_theme_support');
@@ -161,3 +204,7 @@ add_filter( 'register_post_type_args', 'archive', 10, 2 );
 
 //投稿ページに目次
 get_template_part( 'add-index' );
+
+//ブロックエディタのパスとURL定数化
+define( 'MY_DIR_URL', get_stylesheet_directory_uri() );
+define( 'MY_DIR_PATH', get_stylesheet_directory() );

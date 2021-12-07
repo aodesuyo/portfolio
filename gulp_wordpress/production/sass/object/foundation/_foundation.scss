@@ -50,6 +50,18 @@
     margin: 60px 0;
   }  
 }
+
+$editor-color-palettes:(
+  blue:#2B3DB1,
+  lightblue:#3C56FD,
+  skyblue:#546BFF,
+  white:#FCFCFC,
+  gray:#E0E0E0,
+  darkyellow:#CDCD79,
+  yellow:#FFFF7C,
+);
+
+
 html {
     font-size: 62.5%; /*ベースを10pxにしています*/
     font-family: MOBO,  'Noto Sans JP','Montserrat', sans-serif, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
@@ -76,3 +88,5 @@ a{
   width: 1px;
   overflow: hidden;
 }
+
+

@@ -199,11 +199,11 @@
     }
     .tab-caption-box{
         &-label{
-        background:#2B3DB1;
+        background:variables.$blue;
         color:white;
         display:inline-block;
         padding:10px 5px;
-        border:solid #2B3DB1;
+        border:solid variables.$blue;
         border-radius:10px 10px 0px 0px;
         }
         &-content{
@@ -215,4 +215,12 @@
             }
         }
     }
+    @each $key,$value in foundation.$editor-color-palettes{
+        .has-#{$key}-color{
+          color:$value;
+        }
+        .has-#{$key}-background-color{
+          background-color:$value;
+        }
+      }
 }
