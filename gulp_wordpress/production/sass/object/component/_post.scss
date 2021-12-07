@@ -51,6 +51,14 @@
     .wp-block-image{
         text-align: center;
         @include foundation.blockmargin;
+        img{
+            object-fit:cover;
+            width:100%;
+            height:auto;
+            @include foundation.media_tablet{
+                width:auto;
+            }
+        }
     }
     .alignleft{
         display: block;

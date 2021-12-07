@@ -13,5 +13,6 @@
           }
     }
     );
-
+    $('.p-portfolio-list__text').each(function() {
+    }
 })( jQuery );
