@@ -409,6 +409,22 @@ li > ul {
   width: 100%;
   overflow: hidden;
 }
+.c-post .tab-caption-box-label {
+  background: #2B3DB1;
+  color: white;
+  display: inline-block;
+  padding: 10px 5px;
+  border: solid #2B3DB1;
+  border-radius: 10px 10px 0px 0px;
+}
+.c-post .tab-caption-box-content {
+  border: solid 5px;
+  border-radius: 0px 20px 20px 20px;
+}
+.c-post .tab-caption-box-content p {
+  margin: 20px;
+  font-size: 14px;
+}
 
 .c-header__button {
   color: black;
