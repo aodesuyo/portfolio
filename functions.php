@@ -1,4 +1,9 @@
 <?php
+
+//ブロックエディタのパスとURL定数化
+define( 'MY_DIR_URL', get_stylesheet_directory_uri() );
+define( 'MY_DIR_PATH', get_stylesheet_directory() );
+
   function custom_theme_support() {
       add_theme_support('html5',array(
           'search-form',
@@ -22,10 +27,59 @@
           'archive_postMenu'=>'投稿記事一覧サイドバーメニュー',
           'postMenu'=>'投稿記事サイドバーメニュー'
       ));//メニュー位置を呼び出す
-
+            //色パレット管理
+            add_theme_support( 'editor-color-palette', [
+              [
+                  'name'  => '青',
+                  'slug'  => 'blue',
+                  'color' => '#2B3DB1',
+              ],
+              [
+                'name'  => '薄青',
+                'slug'  => 'lightblue',
+                'color' => '#3C56FD',
+              ],
+              [
+                'name'  => '水色',
+                'slug'  => 'skyblue',
+                'color' => '#546BFF',
+              ],
+              [
+                'name'  => '白',
+                'slug'  => 'white',
+                'color' => '#FCFCFC',
+              ],
+              [
+                'name'  => '灰色',
+                'slug'  => 'gray',
+                'color' => '#E0E0E0',
+              ],
+              [
+                'name'  => '濃黄色',
+                'slug'  => 'darkyellow',
+                'color' => '#CDCD79',
+              ],
+              [
+                'name'  => '黄色',
+                'slug'  => 'yellow',
+                'color' => '#FFFF7C',
+              ],
+              [
+                  'name'  => '黒',
+                  'slug'  => 'black',
+                  'color' => '#000',
+              ],
+          ] );
   }
   add_action( 'after_setup_theme','custom_theme_support');
 
+  add_action( 'enqueue_block_editor_assets', function() {
+    // ブロックエディタ用CSSの読み込み
+    wp_enqueue_style( 'my-block-style', MY_DIR_URL . '/block/block-style.css', array(), "" );
+
+    // ブロックエディタ用JSの読み込み
+    wp_enqueue_script( 'my-block-script', MY_DIR_URL . '/block/block-script.js', array(), "", "true" );
+} );
   function admin_css(){
     echo '<link rel="stylesheet" type="text/css" href="'.get_template_directory_uri().'/css/admin.css">';
     }
@@ -51,6 +105,8 @@ function mysite_script() {
   wp_enqueue_style('fontawesome','//use.fontawesome.com/releases/v5.2.0/css/all.css',array(),"");//fontawesome
   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',"","",true);//jQuery
   wp_enqueue_script('script',get_template_directory_uri().'/script.js','jquery',$theme_version,true);//jQuery
+  $timestamp = date_i18n( 'Ymdgis', filemtime( MY_DIR_PATH . '/block/block-style.css' ) );
+  wp_enqueue_style( 'my-block-style', MY_DIR_URL . '/block/block-style.css', array(), $timestamp );
 }
 add_action('wp_enqueue_scripts','mysite_script');
 
@@ -161,3 +217,18 @@ add_filter( 'register_post_type_args', 'archive', 10, 2 );
 
 //投稿ページに目次
 get_template_part( 'add-index' );
+
+//ブロックスタイルの追加
+add_action( 'init', function() {
+  register_block_style(
+      'core/paragraph',//対象ブロックのスラッグ名(エディター画面>ブロック部分のDOM>data-type属性)
+      [
+          'name' => 'black-bg',//スタイル名（付与するクラス名）
+          'label' => '黒背景',//スタイルの表示名
+          // 'inline_style' => '.is-style-black-bg { 
+          //     background: #000;
+          //     color: #fff;
+          // }',block-style.cssに記述する。クラス名はis-style- + スタイル名 となる
+      ]
+  );
+} );

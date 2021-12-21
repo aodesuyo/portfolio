@@ -425,6 +425,48 @@ li > ul {
   margin: 20px;
   font-size: 14px;
 }
+.c-post .has-blue-color {
+  color: #2B3DB1;
+}
+.c-post .has-blue-background-color {
+  background-color: #2B3DB1;
+}
+.c-post .has-lightblue-color {
+  color: #3C56FD;
+}
+.c-post .has-lightblue-background-color {
+  background-color: #3C56FD;
+}
+.c-post .has-skyblue-color {
+  color: #546BFF;
+}
+.c-post .has-skyblue-background-color {
+  background-color: #546BFF;
+}
+.c-post .has-white-color {
+  color: #FCFCFC;
+}
+.c-post .has-white-background-color {
+  background-color: #FCFCFC;
+}
+.c-post .has-gray-color {
+  color: #E0E0E0;
+}
+.c-post .has-gray-background-color {
+  background-color: #E0E0E0;
+}
+.c-post .has-darkyellow-color {
+  color: #CDCD79;
+}
+.c-post .has-darkyellow-background-color {
+  background-color: #CDCD79;
+}
+.c-post .has-yellow-color {
+  color: #FFFF7C;
+}
+.c-post .has-yellow-background-color {
+  background-color: #FFFF7C;
+}
 
 .c-header__button {
   color: black;
