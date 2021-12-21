@@ -1,4 +1,9 @@
 <?php
+
+//ブロックエディタのパスとURL定数化
+define( 'MY_DIR_URL', get_stylesheet_directory_uri() );
+define( 'MY_DIR_PATH', get_stylesheet_directory() );
+
   function custom_theme_support() {
       add_theme_support('html5',array(
           'search-form',
@@ -69,6 +74,13 @@
   }
   add_action( 'after_setup_theme','custom_theme_support');
 
+  add_action( 'enqueue_block_editor_assets', function() {
+    // ブロックエディタ用CSSの読み込み
+    wp_enqueue_style( 'my-block-style', MY_DIR_URL . '/block/block-style.css', array(), "" );
+
+    // ブロックエディタ用JSの読み込み
+    wp_enqueue_script( 'my-block-script', MY_DIR_URL . '/block/block-script.js', array(), "", "true" );
+} );
   function admin_css(){
     echo '<link rel="stylesheet" type="text/css" href="'.get_template_directory_uri().'/css/admin.css">';
     }
@@ -94,6 +106,8 @@ function mysite_script() {
   wp_enqueue_style('fontawesome','//use.fontawesome.com/releases/v5.2.0/css/all.css',array(),"");//fontawesome
   wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',"","",true);//jQuery
   wp_enqueue_script('script',get_template_directory_uri().'/script.js','jquery',$theme_version,true);//jQuery
+  $timestamp = date_i18n( 'Ymdgis', filemtime( MY_DIR_PATH . '/block/block-style.css' ) );
+  wp_enqueue_style( 'my-block-style', MY_DIR_URL . '/block/block-style.css', array(), $timestamp );
 }
 add_action('wp_enqueue_scripts','mysite_script');
 
@@ -205,6 +219,4 @@ add_filter( 'register_post_type_args', 'archive', 10, 2 );
 //投稿ページに目次
 get_template_part( 'add-index' );
 
-//ブロックエディタのパスとURL定数化
-define( 'MY_DIR_URL', get_stylesheet_directory_uri() );
-define( 'MY_DIR_PATH', get_stylesheet_directory() );
+

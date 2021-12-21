@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* エディター全体の背景色やフォント周りの指定 */
+.block-editor .editor-styles-wrapper {
+  background-color: #fff;
+  color: #333;
+  /* font-family とかもここでOK */
+}
+
+/* 通常ブロックの横幅（デフォルト値：580px） */
+.block-editor .wp-block {
+  max-width: 800px;
+}
+
+/* 幅広ブロックの横幅（デフォルト値：1100px） */
+.block-editor .wp-block[data-align="wide"] {
+  max-width: 1000px;
+}
+
+/* 投稿タイトルのフォントサイズがデフォルトだとでかすぎるので変更する */
+.block-editor .editor-post-title textarea{
+  font-size: 32px;
+}
+.bg-black{
+  background: #000;
+  color: #fff;
+}
+
+.is-style-black-bg { 
+  background: #000;
+  color: #fff;
+}

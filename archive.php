@@ -37,13 +37,7 @@
                 <?php wp_list_categories( 'title_li=' ); ?>
             </section>
                 <?php get_search_form(); ?>
-            <?php  wp_nav_menu( array(
-            'theme_location'=>'postMenu',
-            'container' => 'false',
-            'items_wrap' => '<ul class="c-menu-single">%3$s</ul>',
-            'menu_class'=>'c-menu-single'
-            )
-            );?>
+
         </section>
     </article>
     <div class="c-paginate">

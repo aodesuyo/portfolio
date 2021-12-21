@@ -22,13 +22,6 @@
                 <h2 class="c-title--small">カテゴリ</h2>
                 <?php wp_list_categories( 'title_li=' ); ?>
             </section>
-    <?php  wp_nav_menu( array(
-            'theme_location'=>'postMenu',
-            'container' => 'false',
-            'items_wrap' => '<ul class="c-menu-single">%3$s</ul>',
-            'menu_class'=>'c-menu-single'
-            )
-    );?>
     </section>
 </article>
 <a class="c-button" href="<?php echo home_url(); ?>/single/">投稿記事一覧に戻る</a>
